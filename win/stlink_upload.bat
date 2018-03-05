@@ -13,7 +13,7 @@ set str=%str:/=\%
 rem: ------------- use STLINK CLI
 rem: echo "" is mandatory to exit ST-Link_CLI tools w 3.0.0.0 when "-Run" option is used,
 rem: it now wait Enter key press to quit.
-echo "" | stlink\ST-LINK_CLI.exe -c SWD -P %str% 0x8000000 -Rst -Run
+echo "" | stlink\ST-LINK_CLI.exe -c SWD UR -P %str% 0x8000000 -Rst -Run
 
 rem: Using the open source texane-stlink instead of the proprietary STM stlink exe
 rem:texane-stlink\st-flash.exe write %str% 0x8000000
